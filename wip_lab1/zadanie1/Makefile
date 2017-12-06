@@ -1,6 +1,6 @@
 CC = clang
 CFLAGS = -Wall --pedantic -std=c11
-NAMES = hello arithmetic temperature
+NAMES = magic_word abrakadabra magic_word_oneline
 
 all: $(NAMES)
 

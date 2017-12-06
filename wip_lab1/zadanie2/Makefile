@@ -1,10 +1,11 @@
 CC = clang
 CFLAGS = -Wall --pedantic -std=c11
-NAMES = hello arithmetic temperature
+LDLIBS = -lm
+NAMES = quadratic_equation
 
 all: $(NAMES)
 
-$(NAMES):
+$(NAMES): 
 
 clean:
 	rm -f $(NAMES) *~

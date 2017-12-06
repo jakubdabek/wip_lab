@@ -1,10 +1,10 @@
 CC = clang
 CFLAGS = -Wall --pedantic -std=c11
-NAMES = hello arithmetic temperature
+NAMES = triangle
 
 all: $(NAMES)
 
-$(NAMES):
+$(NAMES): 
 
 clean:
 	rm -f $(NAMES) *~

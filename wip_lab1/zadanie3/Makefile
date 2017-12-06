@@ -1,6 +1,6 @@
 CC = clang
-CFLAGS = -Wall --pedantic -std=c11
-NAMES = hello arithmetic temperature
+CFLAGS = -Wall --pedantic -std=c11 
+NAMES = rectangle
 
 all: $(NAMES)
 
