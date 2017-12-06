@@ -3,5 +3,5 @@
 *.out
 *.swp
 *.old
-bin/
-obj/
+bin/*
+obj/*
