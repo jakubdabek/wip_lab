@@ -1,3 +1,5 @@
+//temperature.c
+//Jakub Dąbek
 #include <stdio.h>
 #include <stdlib.h>
 

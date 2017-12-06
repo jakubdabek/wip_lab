@@ -1,3 +1,5 @@
+//arithmetic.c
+//Jakub Dąbek
 #include <stdio.h>
 
 #define BUFFER_LENGTH 40

@@ -1,3 +1,5 @@
+//hello.c
+//Jakub Dąbek
 #include<stdio.h>
 
 int main(void)
