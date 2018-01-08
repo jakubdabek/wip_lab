@@ -21,10 +21,8 @@ bool match_impl(const char *pattern, const char *str, size_t pattern_len, size_t
 {
 	while(*pattern != '*')
 	{
-		if(pattern_len == 0 || str_len == 0 || *pattern == '\0' || *str == '\0')
-		{
-			return *pattern == *str;
-		}
+		if(pattern_len == 0) return str_len == 0;
+		if(*pattern == '\0') return *pattern == *str;
 
 		if(*pattern == '?' || *pattern == *str)
 		{
@@ -61,6 +59,9 @@ bool match_impl(const char *pattern, const char *str, size_t pattern_len, size_t
 
 	for(int i = 0; i <= str_len; i++)
 	{
+		fprintf(stderr, "pattern: %-*s str: %-*s\n", pattern_len, pattern, str_len - i, str + i);
+		fprintf(stderr, "pattern_len: %d str_len*: %d\n", pattern_len, str_len - i);
+
 		if(match_impl(pattern, str + i, pattern_len, str_len - i))
 		{
 			return true;

@@ -1,3 +1,5 @@
+
+pattern
 pattern
 patter?
 ?attern
@@ -32,7 +34,19 @@ pa*rn*
 *pa*rn
 p*attern
 p**attern
+*********
+****************
+?*
+*?
+**?
+**r?
+p*?**rn
+p*?**r?
+??*?
+*??*
+?*?*
 
+pattern
 pattern?
 ?pattern
 ?attern?
@@ -51,3 +65,20 @@ x**
 **x
 pa*xrn
 patte*xrn
+******************x
+x******************
+
+abababababababab
+a*b
+a*ab
+aba*???*b
+a?a?a?a?a?a?a?a?
+a*a*a*a*a*b
+
+ababababababab
+a*a
+a*aba
+a*a*a*a*a*a*a
+
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab
+a*****a*aa*aa***aaaaa*b

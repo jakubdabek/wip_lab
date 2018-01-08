@@ -12,6 +12,8 @@ $(OBJS): obj/%.o : src/%.c src/match.h
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 test: test/test
+	test/test < test/tests.csv 2>/dev/null
+test_debug: test/test
 	test/test < test/tests.csv
 test/test: obj/match_test.o obj/match.o src/match.h
 	$(CC) $(CFLAGS) -o $@ $< obj/match.o  

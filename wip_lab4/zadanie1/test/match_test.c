@@ -25,24 +25,31 @@ int main(int argc, const char **args)
 {
 	bool pass = true;
 
-	const char * const format = "pattern: %-10s  text: %-10s  result: %s\n";
+	const char * const format = "pattern: %-20s  text: %-20s  result: %s\n";
 	FILE * const output = stdout;
 	char buffer[BUFFER_SIZE];
+	char text[BUFFER_SIZE];
 
-	bool expected = true;
+	bool expected = false;
 	while(fgets(buffer, BUFFER_SIZE, stdin))
 	{
-		if(*buffer == '\n')
+		if(buffer[0] == '\n')
 		{
 			expected = !expected;
+			fgets(text, BUFFER_SIZE, stdin);
+			if(text[0] == '\n')
+				break;
+			if(text[strlen(text) - 1] == '\n')
+			text[strlen(text) - 1] = '\0';
 			continue;
 		}
 		
 		if(buffer[strlen(buffer) - 1] == '\n')
 			buffer[strlen(buffer) - 1] = '\0';
 
-		bool is_match = match(buffer, "pattern");
-		fprintf(output, format, buffer, "pattern", result(is_match, expected));
+		fprintf(stderr, "\nSTART pattern: %-12s  text: %-12s\n", buffer, text);
+		bool is_match = match(buffer, text);
+		fprintf(output, format, buffer, text, result(is_match, expected));
 		if(is_match != expected)
 			pass = false;
 	}
