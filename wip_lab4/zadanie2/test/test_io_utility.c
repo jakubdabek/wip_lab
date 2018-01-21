@@ -22,6 +22,11 @@ bool query_continue(bool result)
         current_combination[2],
         current_combination[3],
         counter);
+    if(!result)
+    {
+        printf("ERROR, we're cheating :(");
+        return false;
+    }
     
     if(++index < MAX6_4)
     {

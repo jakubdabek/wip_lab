@@ -13,6 +13,7 @@ $(OBJS): obj/%.o : src/%.c src/io_utility.h
 
 test: test/test
 	test/test >results.csv
+	grep -qv ERROR results.csv
 	cat results.csv | cut -d, -f2 | sort | uniq -c | awk '{print $$2, $$1}' >statistics.txt
 test/test: obj/test_io_utility.o obj/utility.o obj/main.o src/io_utility.h src/utility.h
 	$(CC) $(CFLAGS) -o $@ $(filter %.o,$^)
