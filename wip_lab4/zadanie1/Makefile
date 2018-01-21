@@ -23,4 +23,4 @@ obj/match_test.o: test/match_test.c
 clean:
 	rm -f $(OBJS) program obj/match_test.o test/test *~ **/*~
 
-.PHONY: all clean test
+.PHONY: all test clean
