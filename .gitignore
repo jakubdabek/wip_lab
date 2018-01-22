@@ -1,6 +1,7 @@
 *~
 *.o
 *.out
+*.plist
 *.swp
 *.old
 bin/*
